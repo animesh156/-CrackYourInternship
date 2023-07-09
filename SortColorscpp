@@ -1,0 +1,31 @@
+// Time Complexity:-O(n)
+// Space Complexity:-O(1)
+
+void sortColors(vector<int>& nums) {
+        int cnt_zero=0,cnt_one=0,cnt_two=0;
+
+        for(int i=0;i<nums.size();i++){
+            if(nums[i]==0){
+                cnt_zero++;
+            } else if(nums[i]==1){
+                cnt_one++;
+            } else if(nums[i]==2){
+                cnt_two++;
+            }
+        }
+
+        int j=0;
+
+        while(cnt_zero--){
+            nums[j++]=0;
+        }
+
+        while(cnt_one--){
+            nums[j++]=1;
+        }
+
+        while(cnt_two--){
+            nums[j++]=2;
+        }
+
+    }
